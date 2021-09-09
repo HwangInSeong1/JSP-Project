@@ -58,4 +58,26 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+	.
+	.
+	.
+// UserDAO.java 파일 회원가입 DB TABLE 값 입력받은 값 저장 기능
+public int join(User user) {
+		String SQL = "INSERT INTO USER VALUES (?, ?, ?, ?, ?, ?, ?)";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, user.getUser_ID());
+			pstmt.setString(2, user.getUser_PW());
+			pstmt.setString(3, user.getUser_NAME());
+			pstmt.setString(4, user.getUser_BIRTH());
+			pstmt.setString(5, user.getUser_EMAIL());
+			pstmt.setString(6, user.getUser_PHONE());
+			pstmt.setString(7, user.getUser_GENDER());
+			return pstmt.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // 데이터베이스 오류
+	}
+}
 ```
