@@ -18,3 +18,10 @@
 ![2](https://user-images.githubusercontent.com/66094508/132646458-e74c0eb8-6a50-402a-99cb-3440bf92250b.png)
 
 ### 프로젝트 구현화면2
+```
+회원가입 창과 그에 해당하는 회원DB 구조입니다.
+```
+![그림2](https://user-images.githubusercontent.com/66094508/132647077-39b5639d-d471-4b12-8ba8-14033e3f4bc6.png)
+![그림1](https://user-images.githubusercontent.com/66094508/132647086-c65f86e0-6c19-4649-894b-46fcef631d0f.png)
+
+### 프로젝트 구현화면3
