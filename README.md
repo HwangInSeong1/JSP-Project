@@ -27,6 +27,7 @@
 ### 프로젝트 구현화면3
 ```
 회원자가 게시판 글을 쓰게되면 해당게시판DB에 저장되고 그에따른 게시판 목록이 최신화 되도록 하였습니다.
+또한 영화별로 리뷰게시글을 볼수 있도록 select-option 기능을 추가하였습니다.
 ```
 ![그림8](https://user-images.githubusercontent.com/66094508/132647508-9acee6cc-06b8-4a68-8f34-f8ccb856d38e.png)
 ![그림7](https://user-images.githubusercontent.com/66094508/132647547-4d2a2994-6399-43da-b814-b1e18c32f6c1.png)
