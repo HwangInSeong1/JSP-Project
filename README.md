@@ -80,4 +80,31 @@ public int join(User user) {
 		return -1; // 데이터베이스 오류
 	}
 }
+
+//ration.jsp 파일 영화 순위 뽑기 해당 부분
+<% 
+			request.setCharacterEncoding("UTF-8");
+			Class.forName("com.mysql.jdbc.Driver");
+			String dbURL = "jdbc:mysql://localhost:3306/movie?serverTimezone=UTC";
+			String dbID = "root";
+			String dbPW = "1234";
+			Connection conn = DriverManager.getConnection(dbURL,dbID,dbPW);
+			String SQL = "select M_Name, round(avg(M_Score),2) as rating from mvrlist group by M_Name order by rating desc;";
+			PreparedStatement pstmt=conn.prepareStatement(SQL);
+			ResultSet rs = pstmt.executeQuery();
+	%>
+	<%int i=1; %>
+	<table style="margin-left:auto;margin-right:auto;">
+	<tr>
+	<th style="background-color:white;color:black;">순위</th> <th style="width:300px;background-color:white;color:black;">영화제목</th> <th style="background-color:white;color:black;">평점</th>
+	</tr>
+	<%while(rs.next()){
+		%>
+		<tr>
+		<th><%out.println(i++); %></th> 
+		<th><%=rs.getString("M_Name") %></th>
+		<th><%=rs.getString("rating") %></th>
+		</tr>
+		<tr>
+	<%} %>
 ```
